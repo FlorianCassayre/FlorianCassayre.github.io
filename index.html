@@ -5,9 +5,17 @@ title: {{ site.name }}
 
 <div id="home">
   <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  {% for post in site.posts %}
+    <article>
+      <header>
+        <h2 style="margin-bottom: 0">
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h2>
+        <p class="meta" style="margin-top: 0"><em><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time></em></p>
+      </header>
+      {{ post.content }}
+    </article>
+  {% endfor %}
 </div>

@@ -5,6 +5,9 @@ baseurl:      ""
 paginate:     1
 locale:       "en"
 
+baseurl: ""
+url: "https://cg.cassayre.me"
+
 # About/contact
 author:
   name:       Florian Cassayre

@@ -190,3 +190,26 @@ a:hover { text-decoration: underline; }
 .site-footer-owner { display: block; font-weight: bold; }
 
 .site-footer-credits { color: #819198; }
+
+.image-medium
+{
+    margin: 0 auto;
+    display: block;
+    width: 20%;
+}
+
+.image-medium
+{
+    margin: 0 auto;
+    display: block;
+    width: 40%;
+}
+
+.image-large
+{
+    margin: 0 auto;
+    display: block;
+    width: 60%;
+}
+
+figcaption { text-align: center; font-style: italic; }

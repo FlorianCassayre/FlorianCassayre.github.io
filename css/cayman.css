@@ -212,4 +212,5 @@ a:hover { text-decoration: underline; }
     width: 60%;
 }
 
-figcaption { text-align: center; font-style: italic; }
+.caption { text-align: center; font-style: italic; }
+

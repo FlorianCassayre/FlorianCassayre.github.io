@@ -16,9 +16,10 @@ The hemisphere is oriented outwards in respect to the normal vector.
 The radius of the hemisphere is an arbitrary value that corresponds to the local area that must be considered.
 Larger values create more realistic renderings but are possibly also more expensive.
 
-{% figure caption:"The point of interest is represented in magenta. The hemisphere orientation is determined by the normal vector of the surface (n). The sampled rays are in blue and red depending on wether they intersected in a surface or not. The green area is the sought area" %}
 ![](/img/ambient_occlusion_hemisphere.svg){: .image-medium }
-{% endfigure %}
+
+{: .caption }
+The point of interest is represented in magenta. The hemisphere orientation is determined by the normal vector of the surface (n). The sampled rays are in blue and red depending on wether they intersected in a surface or not. The green area is the sought area
 
 Now the question arises on how to implement such a procedure.
 Since it is an improvement on the regular ambiant lighting system we updated this function such that instead of returning a constant value it would be affected by the position of the intersection.
@@ -26,13 +27,15 @@ The integral can be approximated using a stochastic sampling process: we will ca
 The trick used to generate a random vector in a sphere is to first generate a random vector in a cube (trivial), and discard it if its norm is greater than one.
 Finally if the scalar product between the vector and the normal is negative that means it is not in the hemisphere, so the opposite vector is chosen instead.
 
-{% figure caption:"Scene rendered without colors and only ambient occlusion; radius was set to 1 distance unit and sampling to 300 rays per pixel" %}
 ![](/img/ambient_occlusion_alone.bmp){: .image-large }
-{% endfigure %}
 
-{% figure caption:"The same scene with the previous effects" %}
+{: .caption }
+Scene rendered without colors and only ambient occlusion; radius was set to 1 distance unit and sampling to 300 rays per pixel
+
 ![](/img/ambient_occlusion_all.bmp){: .image-large }
-{% endfigure %}
+
+{: .caption }
+The same scene with the previous effects
 
 The results are quite encouraging, even though the rendering time has drastically increased (the previous images took half an hour to complete).
 As we are working on implementing an efficient queriable structure for the scene, we are confident that this issue will be solved or at least greatly reduced when we merge the two.

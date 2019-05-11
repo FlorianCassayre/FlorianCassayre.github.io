@@ -212,5 +212,12 @@ a:hover { text-decoration: underline; }
     width: 60%;
 }
 
+.image-huge
+{
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+}
+
 .caption { text-align: center; font-style: italic; }
 

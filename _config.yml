@@ -1,6 +1,6 @@
 # Setup
 title:        Computer Graphics Project
-tagline:      Improving the raytracer
+tagline:      Basic techniques in ray tracing
 baseurl:      ""
 paginate:     1
 locale:       "en"

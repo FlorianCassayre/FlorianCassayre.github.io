@@ -29,7 +29,7 @@ $$F' := F + \rho \cdot \begin{pmatrix} cos(\theta) \\ sin(\theta) \\ 0 \end{pmat
 
 The last step is to sample rays passing by $$P$$ and different focal points on the aperture plane:
 
-$$\int_{0}^{2 \pi} \int_{0}^{r_{aperture}} f_{trace}(F', P - F') d \rho d \theta$$
+$$\int_{0}^{2 \pi} \int_{0}^{r_{aperture}} \rho \cdot f_{trace}(F', P - F') d \rho d \theta$$
 
 ![](/img/depth_field_red_blue.bmp){: .image-huge }
 

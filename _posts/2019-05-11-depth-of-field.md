@@ -20,6 +20,13 @@ And of course not to mention a sampling rate.
 
 By the way we defined our parameters, we want object located at the focused distance to appear clear.
 Therefore for each pixel we will compute the point that would come out the sharpest if there happened to be an object there. 
+
+![](/img/field_of_view_rays.svg){: .image-large }
+
+{: .caption }
+The aperture is the left black box, the chosen focus is represented by the dashed line and the three objects represented by three colored circles.
+Observe that all the rays intersect on the arc, and that the only object that will render correctly is the blue one.
+
 Let $$F$$ be our focal point (the position of the camera) and $$\vec{r}$$ the normalized ray for that pixel.
 We have $$P := F + d_{focus} \cdot \vec{r}$$, the focused point.
 Now let's define two variables, $$\theta \in [0, 2 \pi]$$ and $$\rho \in [0, r_{aperture}]$$.

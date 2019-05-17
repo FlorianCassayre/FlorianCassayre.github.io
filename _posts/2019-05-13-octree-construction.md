@@ -18,6 +18,12 @@ The code for the octree is divided into two independent steps: the **constructio
 
 In this first post we will briefly describe the construction. Note that in our case this procedure does not need to be optimal as it is only going to be run once, at the beginning.
 
+![](/img/quadtree_construction.svg){: .image-huge }
+
+{: .caption }
+This figure illustrate the process layer by layer in the 2D case (quadtree).
+At the last step all the squares are leaves and contain at most one line segment.
+
 As a starting point we need to find the smallest box that contains all the triangles.
 This is done in a single pass and will serve as the base case of our recurrence.
 The boxes can be represented by only two points, the minimum and maximum corners, and they contain a list of triangles and an optional list of boxes.
